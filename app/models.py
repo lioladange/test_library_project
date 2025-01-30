@@ -254,16 +254,15 @@ def generate_and_insert_data():
     insert_books(books)
     print("Data generation and insertion complete!")
 
-###СОЗДАТЬ БД ЗАНОВО
+###СОЗДАТЬ БД заново вручную, если не использовать alembic по каким-то причинам
+"""
 def init_db():
-    """
-    Создать всю базу заново, удалив все что было до
-    """
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
     print("Tables were created.")
+"""
 
-
+#при запуске файла таблицы Books и Authors наполнятся соответсвующей фейковой информацией (100 записей)
 if __name__ == '__main__':
-    init_db()
+    #init_db()
     generate_and_insert_data()

@@ -75,11 +75,6 @@ def app_get_all_users(amount: int=100, db:Session = Depends(get_db),
                        admin: User=Depends(admin_required))->List[UserGet]:
     return get_all_users(db=db, amount=amount)
 
-#READ ALL USERS, protected для админа
-#получить всю информацию о  юзере по его айди, включая хэш пароля.
-@app.get('/get_all_users/{amount}', response_model=List[UserGet])
-def app_get_all_users(amount: int=100, db:Session = Depends(get_db))->List[UserGet]:
-    return get_all_users(db=db, amount=amount)
 
 
 #READ USER protected, только с авторизацией
