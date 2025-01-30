@@ -1,0 +1,22 @@
+# Ignore virtual environment
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore environment variables
+.env
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore migration files
+#migrations/
+
+# Ignore project files
+app/черновик.py
+app/project_structure
+
